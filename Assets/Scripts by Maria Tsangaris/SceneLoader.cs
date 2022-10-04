@@ -11,15 +11,15 @@ namespace MariaTsangaris
     public class SceneLoader : MonoBehaviour
     {
         // TODO Loader 1/4: Declare a string variable for the name of the scene we want to load, which is this scene. (Write in the scene's name in Unity's Inspector.)
-        public string game;
+        public string game; // Variable for the scene we want to load.
 
         private void LoadScene()
         {
             // TODO Loader 2/4: Call Unity's "SceneManager.LoadScene" method and pass in your scene name variable to its parameters—within the parentheses ( ).
-            SceneManager.LoadScene(game);
+            SceneManager.LoadScene(game); // Loading our own scene 'game'
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void OnTriggerEnter2D(Collider2D collision) // Triggers Collider2D for collision in the scene.
         {
             // TODO Loader 3/4: Call your load scene method to load this same scene again (effectively restarting the game).
             LoadScene();
